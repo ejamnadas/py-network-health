@@ -1,0 +1,3 @@
+
+def getProperty():
+  return 'LQS';
