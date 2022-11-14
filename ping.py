@@ -1,6 +1,6 @@
 import os
 import smtplib, ssl
-import email
+import dtma_email 
 import variables
   
 property = variables.getProperty()
@@ -14,7 +14,7 @@ def check_ping(hostname, descr):
         pingstatus = "Network Active"
     else:
         pingstatus = "Network Error"
-        email(property + ' ping failed for ' + hostname +"(" + descr + ")")
+        dtma_email.send(property + ' Internal device lost', property + ' ping failed for ' + hostname +"(" + descr + ")")
     
     return pingstatus
 
