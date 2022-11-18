@@ -22,7 +22,7 @@ def last_hb_in_min_fail(property):
 
   try:
     minutes = pg.get_last_hb_in_min(property)
-    if (minutes > 1):
+    if(minutes > 1):
       healthy =False 
     else:
       healthy =True 
