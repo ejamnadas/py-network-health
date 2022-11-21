@@ -1,6 +1,6 @@
-pgUser = 'ejamnadas'
-pgWp = 'N33nte*'
-pgHost = '35.184.12.134'
+pgUser = 'xxx'
+pgWp = 'xxx'
+pgHost = 'xxx'
 pgPort = '5432'
 
 def getProperty():
