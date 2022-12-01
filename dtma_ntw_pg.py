@@ -19,3 +19,13 @@ def get_last_hb_in_min(property):
   conn.close()
   return res[1]
 
+
+
+def clear_hb():
+  conn = pg_conn.get_conn()
+  cursor = conn.cursor()
+  cursor.execute("delete from ntw_hb_log where hb_datetime < NOW() - INTERVAL '2 DAY'")
+  #cursor.execute("INSERT INTO ntw_hb_log(hb_device, property) VALUES('test', 'test')")
+  conn.commit()
+  cursor.close()
+  conn.close()

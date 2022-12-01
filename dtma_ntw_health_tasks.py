@@ -17,6 +17,12 @@ def hb_save(property):
   except Exception as e:
     pg.save_hb('(exception {e} ) alert_device ' + localhost, property)
 
+def hb_clear():
+  try:
+    pg.clear_hb()
+  except Exception as e:
+    pg.save_hb('(exception {e} ) alert_device', 'all')
+
 def last_hb_in_min_fail(property):
   healthy = False
 
